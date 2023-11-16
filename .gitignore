@@ -105,3 +105,7 @@ dist
 
 # package-lock.json
 package-lock.json
+
+# bd workbench
+bmagal.mwb
+bmagal.mwb.bak
