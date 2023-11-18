@@ -21,6 +21,24 @@ module.exports = (sequelize) => {
     description: {
       type: DataTypes.STRING,
       allowNull: false
-    }
-  });
+    },
+    initial_price: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
+    discount: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
+    final_price: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
+    status: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+  },
+  {timestamps: false}
+  );
 };
