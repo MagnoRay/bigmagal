@@ -38,6 +38,14 @@ module.exports = (sequelize) => {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    total_score: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {timestamps: false}
   );

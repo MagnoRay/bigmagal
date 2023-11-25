@@ -50,10 +50,10 @@ User.hasMany(Review);
 
 Order.belongsTo(User);
 User.hasMany(Order);
-
+/*
 Product.belongsTo(Category);
 Category.hasMany(Product);
-
+*/
 Item.belongsTo(Order);
 Order.hasMany(Item);
 
