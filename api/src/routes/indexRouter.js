@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const { products } = require('../../api');
 const { Product } = require('../db');
+const { productRouter } = require("./productRouter");
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 
@@ -9,13 +10,14 @@ const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
+router.use("/product", productRouter);
 
-router.use("/api", async(req, res)=>{
+router.use("/api", async (req, res) => {
     const allProducts = await Product.findAll();
-    if(!allProducts.length){
+    if (!allProducts.length) {
         await Product.bulkCreate(products);
         res.status(200).json("Producto Cargado");
-    }else{
+    } else {
         res.status(200).json("Producto ya esta cargado");
     }
 });
