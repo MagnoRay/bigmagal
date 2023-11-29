@@ -1,5 +1,6 @@
 const { getProductByNameController } = require("../controllers/productControllers/getProductByNameController");
 const { getAllProductsController } = require("../controllers/productControllers/getAllProductsController");
+const { getAdminProductsController } = require("../controllers/productControllers/getAdminProductsController");
 
 const getProductHandler = async (req, res) => {
     const { name } = req.query;
@@ -16,6 +17,16 @@ const getProductHandler = async (req, res) => {
     }
 }
 
+const getAdminProductsHandler = async (req, res) => {
+    try {
+        const allProduct = await getAdminProductsController();
+        res.status(200).send(allProduct);
+    } catch (error) {
+        res.status(400).send({ error: error.message });
+    }
+}
+
 module.exports = {
-    getProductHandler
+    getProductHandler,
+    getAdminProductsHandler
 }
