@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Hola soy Bigmagal</h1>
+      <h1>HuarazSky, el poder de los andes, en la nube</h1>
     </div>
   );
 }
