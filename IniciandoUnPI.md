@@ -1,4 +1,4 @@
-![BigmagalLogo](https://scontent.flim37-1.fna.fbcdn.net/v/t39.30808-6/274079857_4938347872877498_3672535462621260884_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3sWyN-LRhqgQ7kNvwGHoegL&_nc_oc=AdksZSr2euVb_1304v52sCqnpXB-4GKKFOp5V2J8C4W1qLu0dSC2U3DSq-W4iVQ3bbg&_nc_zt=23&_nc_ht=scontent.flim37-1.fna&_nc_gid=oc1f7IsvOlPlOVsGT4xxcw&oh=00_AfdbQNBhIY5MPNoo61IN66MwQoOLxtXOjfB7cW7Yy-Yk_A&oe=69043A89)
+![BigmagalLogo](./client/src/assets/logo/wara.png)
 
 # **GUÍA | ¿Cómo empezar un proyecto individual?**
 
