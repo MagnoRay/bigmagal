@@ -21,11 +21,30 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 require('dotenv').config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT||3001;
 
-// Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+(async () => {
+  try {
+    console.log("Conectando a la base de datos...");
+
+    await conn.authenticate(); 
+    console.log("✅ Conexión a la base de datos establecida con éxito.");
+
+    await conn.sync({ alter: true }); 
+    console.log("🔄 Modelos sincronizados (sin borrar datos).");
+
+    server.listen(PORT, () => {
+      console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
+    });
+
+  } catch (error) {
+    console.error("❌ Error al iniciar el servidor:", error);
+  }
+})();
+
+// Connexion anterior Syncing all the models at once.
+/*conn.sync({ force: true }).then(() => {
   server.listen(PORT, () => {
     console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
   });
-});
+});*/
