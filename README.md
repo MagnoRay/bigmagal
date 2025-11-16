@@ -1,0 +1,1 @@
+![BigmagalLogo](./client/src/assets/wara.png)
